@@ -17,11 +17,7 @@ public class NextScene : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-         void OnTriggerStay(Collider target)
-        {
-            if (Input.GetKeyDown ("E") & target.tag == "Player")
-            Debug.Log("You have Pressed E");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        }
+       
     }
+
 }

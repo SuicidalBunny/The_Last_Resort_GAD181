@@ -34,10 +34,14 @@ public class PlayerVehicleScript : MonoBehaviour
             transform.position += Vector3.left * speed * Time.deltaTime;
         }
     }
+    //Checks for any collisions that the player vehicle enters with a trigger
     private void OnTriggerEnter(Collider other)
     {
+        //Checks to see if the player has collided with an NPC Vehicle
         if(other.gameObject.tag == "NPCVehicle")
         {
+            //Runs the check to see if the player is to be arrested
+            policeLink.GetComponent<PoliceVehicleScript>().PoliceArrestCheck();
             //Tells the game to trigger the police sequence
             policeLink.GetComponent<PoliceVehicleScript>().policeTriggered = true;
         }

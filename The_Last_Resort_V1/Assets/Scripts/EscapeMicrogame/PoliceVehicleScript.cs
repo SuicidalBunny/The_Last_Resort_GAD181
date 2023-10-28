@@ -9,6 +9,8 @@ public class PoliceVehicleScript : MonoBehaviour
 
     public bool policeTriggered = false;
 
+    public GameObject playerLink;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +38,17 @@ public class PoliceVehicleScript : MonoBehaviour
             policeTimer = 0.0f;
             //Sets the police trigger to false, thus disabling the police
             policeTriggered = false;
+        }
+    }
+    //Checks to see if the police are already triggered & arrests the player according to if they are or not, causing a game over
+    public void PoliceArrestCheck()
+    {
+        //Checks to see if the police have been triggered onto the screen
+        if(policeTriggered == true)
+        {
+            //Creates a debug log saying that the game is over
+            //Will implement means of disabling controls when new movement system is implemented
+            Debug.Log("Game Over");
         }
     }
 }

@@ -4,8 +4,38 @@ using UnityEngine;
 
 public class KeycardReaderScript : MonoBehaviour
 {
-    private void OnTriggerStay(Collider other)
+    //Timer that will be used to check how long the card has been in the swiper for
+    private float swipeTimer = 0.0f;
+
+    //Checks if a collider is within the trigger zone
+    public void OnTriggerStay2D(Collider2D collision)
     {
-        Debug.Log("Card Reading");
+        //Tells the console that a trigger has been detectes
+        Debug.Log("Card Trigger Detected");
+        
+        //Reads how many seconds has passed whilst in the trigger
+        swipeTimer += Time.deltaTime;
+    }
+
+    //Checks if an collider has exited the trigger
+    public void OnTriggerExit2D(Collider2D collision)
+    {
+        //Tells the console how long the card was in the trigger zone for
+        Debug.Log($"Timer = " + swipeTimer);
+
+        //Checks if the swipe timer is inbetween 0.3 and 0.4 seconds
+        if(swipeTimer > 0.3f &&  swipeTimer < 0.4f)
+        {
+            //Tells the console the system is meant to pass
+            Debug.Log("Pass");
+        }
+        else
+        {
+            //Tells the console the system is meant to fail
+            Debug.Log("Fail");
+        }
+
+        //Resets the timer for the next attempt
+        swipeTimer = 0.0f;
     }
 }

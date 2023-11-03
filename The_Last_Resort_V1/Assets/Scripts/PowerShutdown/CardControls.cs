@@ -12,5 +12,4 @@ public class CardControls : MonoBehaviour, IDragHandler
         //Tells the program to move the object wherever the mouse is dragging it
         transform.position = eventData.position;
     }
-
 }

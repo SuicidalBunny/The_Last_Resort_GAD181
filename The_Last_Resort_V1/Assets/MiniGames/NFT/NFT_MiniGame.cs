@@ -17,7 +17,9 @@ public class NFT_MiniGame : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        rockPet.SetActive(false);
+        error1.SetActive(false);
+        error2.SetActive(false);
     }
 
     // Update is called once per frame
@@ -36,6 +38,7 @@ public class NFT_MiniGame : MonoBehaviour
         if (download == 20)
         {
             error2.SetActive(true);
+            rockPet.SetActive(true);
         }
     }
 
@@ -46,7 +49,6 @@ public class NFT_MiniGame : MonoBehaviour
     public void ButtonClose2()
     {
         error2.SetActive(false);
-        rockPet.SetActive(true);
     }
 
 }

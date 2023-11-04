@@ -6,13 +6,7 @@ public class KeycardReaderScript : MonoBehaviour
 {
     //Timer that will be used to check how long the card has been in the swiper for
     private float swipeTimer = 0.0f;
-    private float timer = 0.0f;
 
-    private int LEDType = 0;
-
-    public GameObject LEDOff;
-    public GameObject LEDOn;
-    public GameObject LEDFail;
 
     //Checks if a collider is within the trigger zone
     public void OnTriggerStay2D(Collider2D collision)
@@ -57,21 +51,4 @@ public class KeycardReaderScript : MonoBehaviour
         //Resets the timer for the next attempt
         swipeTimer = 0.0f;
     }
-
-    private void LEDController()
-    {
-        switch(LEDType)
-        {
-            case 0:
-                LEDOff.SetActive(true);
-                break;
-            case 1:
-                LEDOn.SetActive(true);
-                break;
-            case 2:
-                LEDFail.SetActive(true);
-                break;
-        }
-    }
-
 }

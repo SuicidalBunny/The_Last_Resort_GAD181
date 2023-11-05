@@ -7,6 +7,8 @@ public class KeycardReaderScript : MonoBehaviour
     //Timer that will be used to check how long the card has been in the swiper for
     private float swipeTimer = 0.0f;
 
+    //This will link up the LED controller with the keycard reading script, to all control of LED variables
+    public GameObject LEDLink;
 
     //Checks if a collider is within the trigger zone
     public void OnTriggerStay2D(Collider2D collision)
@@ -41,11 +43,15 @@ public class KeycardReaderScript : MonoBehaviour
         {
             //Tells the console the system is meant to pass
             Debug.Log("Pass");
+            //This will tell the LED Controller to set the LED type to bring up the green light
+            LEDLink.GetComponent<LEDControls>().LEDType = 1;
         }
         else
         {
             //Tells the console the system is meant to fail
             Debug.Log("Fail");
+            //This tells the LED controller to set the led as the red light
+            LEDLink.GetComponent<LEDControls>().LEDType = 2;
         }
 
         //Resets the timer for the next attempt

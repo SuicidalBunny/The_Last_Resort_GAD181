@@ -1,14 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class KeycardReaderScript : MonoBehaviour
 {
     //Timer that will be used to check how long the card has been in the swiper for
     private float swipeTimer = 0.0f;
+    //These will be used for the minimum and maximum interpolation timer
+    private float swipeInterpolationMin = 0.0f;
+    private float swipeInterpolationMax = 0.0f;
 
     //This will link up the LED controller with the keycard reading script, to all control of LED variables
     public GameObject LEDLink;
+
+    private void Start()
+    {
+        //calls to generate a new min and max interpolation timer for the swipe time
+        InterpolationGenerator();
+    }
 
     //Checks if a collider is within the trigger zone
     public void OnTriggerStay2D(Collider2D collision)
@@ -38,8 +48,8 @@ public class KeycardReaderScript : MonoBehaviour
         //Tells the console how long the card was in the trigger zone for
         Debug.Log($"Timer = " + swipeTimer);
 
-        //Checks if the swipe timer is inbetween 0.3 and 0.4 seconds
-        if (swipeTimer > 0.3f && swipeTimer < 0.4f)
+        //Checks if the swipe timer is inbetween the minimum and maximum interpolation time
+        if (swipeTimer > swipeInterpolationMin && swipeTimer < swipeInterpolationMax)
         {
             //Tells the console the system is meant to pass
             Debug.Log("Pass");
@@ -56,5 +66,16 @@ public class KeycardReaderScript : MonoBehaviour
 
         //Resets the timer for the next attempt
         swipeTimer = 0.0f;
+    }
+
+    //Will create a random Interpolation time for how long to swipe the keycard for
+    private void InterpolationGenerator()
+    {
+        //The minimum time will be randomly generated between 0.2 and 0.5 seconds
+        swipeInterpolationMin = Random.Range(0.2f, 0.5f);
+        //Maximum interpolation time will grab the minimum time and add 0.1 seconds to it
+        swipeInterpolationMax = swipeInterpolationMin + 0.1f;
+        //Tells the console what the minimum and maximum interpolation time is
+        Debug.Log($"Min = {swipeInterpolationMin} Max = {swipeInterpolationMax}");
     }
 }

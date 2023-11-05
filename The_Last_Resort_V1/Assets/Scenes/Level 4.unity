@@ -674,7 +674,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LEDType: 0
   ledOff: {fileID: 1528774505}
-  ledOn: {fileID: 1612955939}
+  ledPass: {fileID: 1612955939}
   ledFail: {fileID: 967710888}
 --- !u!1 &1528774505
 GameObject:

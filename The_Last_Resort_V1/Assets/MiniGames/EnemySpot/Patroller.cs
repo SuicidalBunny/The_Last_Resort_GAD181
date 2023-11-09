@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Patroller : MonoBehaviour
 {
+    public GameObject camera;
+    public GameObject deathCamera;
+    public GameObject deathCanvas;
+    public GameObject player;
     public Transform[] waypoints;
     public int speed;
 
@@ -12,6 +16,8 @@ public class Patroller : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        deathCanvas.SetActive(false);
+        deathCamera.SetActive(false);
         waypointIndex = 0;
         transform.LookAt(waypoints[waypointIndex].position);
     }
@@ -40,5 +46,15 @@ public class Patroller : MonoBehaviour
             waypointIndex = 0;
         }
         transform.LookAt(waypoints[waypointIndex].position);
+    }
+     
+    public void OnTriggerEnter(Collider other)
+    {
+       camera.SetActive(false);
+       deathCamera.SetActive(true);
+       deathCanvas.SetActive(true);
+       player.SetActive(false);
+            Debug.Log("You have been seen");
+       
     }
 }

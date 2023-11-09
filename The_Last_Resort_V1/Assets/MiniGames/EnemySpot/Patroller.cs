@@ -54,7 +54,9 @@ public class Patroller : MonoBehaviour
        deathCamera.SetActive(true);
        deathCanvas.SetActive(true);
        player.SetActive(false);
-            Debug.Log("You have been seen");
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        Debug.Log("You have been seen");
        
     }
 }

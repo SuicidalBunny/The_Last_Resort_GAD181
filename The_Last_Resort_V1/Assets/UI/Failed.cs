@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Failed : MonoBehaviour
 {
+    public GameObject button;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +18,7 @@ public class Failed : MonoBehaviour
         
     }
 
-     void OnFail(){
+     public void OnFail(){
        SceneManager.LoadScene(1);
     }
 }

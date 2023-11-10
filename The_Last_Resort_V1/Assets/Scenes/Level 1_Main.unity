@@ -27907,8 +27907,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.99, y: 0.64, z: 3.82}
-  m_Center: {x: 0, y: 0.65, z: 2.17}
+  m_Size: {x: 1.99, y: 1.58, z: 4.71}
+  m_Center: {x: 0, y: 0.9, z: 2.55}
 --- !u!4 &943200400 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 498014, guid: e41cb4cbb2f55144687b557714b8123d, type: 3}
@@ -31734,8 +31734,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.99, y: 0.64, z: 3.82}
-  m_Center: {x: 0, y: 0.65, z: 2.17}
+  m_Size: {x: 1.99, y: 1.58, z: 4.71}
+  m_Center: {x: 0, y: 0.9, z: 2.55}
 --- !u!4 &1078934029 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 498674, guid: 42568e115dadb3c48a4445fb5b94fce3, type: 3}
@@ -52975,7 +52975,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444328, guid: 8f47f0431ffe1d3468b2b73df367c3df, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.5785476
+      value: -0.57854766
       objectReference: {fileID: 0}
     - target: {fileID: 444328, guid: 8f47f0431ffe1d3468b2b73df367c3df, type: 3}
       propertyPath: m_LocalRotation.y
@@ -52983,7 +52983,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444328, guid: 8f47f0431ffe1d3468b2b73df367c3df, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.35251346
+      value: -0.3525135
       objectReference: {fileID: 0}
     - target: {fileID: 487486, guid: 8f47f0431ffe1d3468b2b73df367c3df, type: 3}
       propertyPath: m_LocalPosition.x
@@ -53028,7 +53028,11 @@ PrefabInstance:
     - target: {fileID: 9581920, guid: 8f47f0431ffe1d3468b2b73df367c3df, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 182c8f6a565984745a6de2f120a4c647, type: 2}
+      objectReference: {fileID: 9100000, guid: 929c05feedb0b0a45873d925d27a3bb3, type: 2}
+    - target: {fileID: 9581920, guid: 8f47f0431ffe1d3468b2b73df367c3df, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

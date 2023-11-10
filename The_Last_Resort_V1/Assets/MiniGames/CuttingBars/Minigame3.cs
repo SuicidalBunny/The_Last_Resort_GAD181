@@ -39,6 +39,8 @@ public class Minigame3 : MonoBehaviour
     {
         if(Input.GetKeyDown("e"))
         {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
             miniGame3.SetActive(true);
             Door0.SetActive(true);
         }

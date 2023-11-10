@@ -6,7 +6,6 @@ public class PlayerVehicleScript : MonoBehaviour
 {
 
     private float speed = 10.0f;
-    public GameObject character;
 
     public GameObject policeLink;
 

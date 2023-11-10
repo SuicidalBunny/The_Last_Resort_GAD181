@@ -7,16 +7,12 @@ public class LevelMovementScript : MonoBehaviour
 {
     private float time = 0.0f;
     private float interpolationPeriod = 0.025f;
-    private float timer = 0.0f;
 
     // Update is called once per frame
     void Update()
     {
         //Ties the time float to deltaTime
         time += Time.deltaTime;
-        timer += Time.deltaTime;
-
-        Debug.Log(timer);
 
         //Checks to see if the timer has hit the interpolationPeriod
         if(time >= interpolationPeriod) {

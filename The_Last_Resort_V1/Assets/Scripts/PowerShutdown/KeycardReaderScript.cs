@@ -10,6 +10,8 @@ public class KeycardReaderScript : MonoBehaviour
     //These will be used for the minimum and maximum interpolation timer
     private float swipeInterpolationMin = 0.0f;
     private float swipeInterpolationMax = 0.0f;
+    //Used for the fail counter
+    private int failCount = 0;
 
     //This will link up the LED controller with the keycard reading script, to all control of LED variables
     public GameObject LEDLink;
@@ -18,6 +20,21 @@ public class KeycardReaderScript : MonoBehaviour
     {
         //calls to generate a new min and max interpolation timer for the swipe time
         InterpolationGenerator();
+    }
+
+    //When called it will add 1 to the fail counter and check if the player has failed too many times
+    private void SwipeFail()
+    {
+        //Adds 1 to the fail counter
+        failCount++;
+        //Tells the console how many times the player has failed
+        Debug.Log($"Fail Counter: {failCount}");
+        //Checks if the fail counter is more than or equal to 3 before making the game over screen
+        if(failCount >= 3)
+        {
+            //Tells the console that the game is over
+            Debug.Log("Game Over");
+        }
     }
 
     //Checks if a collider is within the trigger zone
@@ -62,6 +79,8 @@ public class KeycardReaderScript : MonoBehaviour
             Debug.Log("Fail");
             //This tells the LED controller to set the led as the red light
             LEDLink.GetComponent<LEDControls>().LEDType = 2;
+            //Adds 1 to the fail counter and checks to see if the player has failed the minigame
+            SwipeFail();
         }
 
         //Resets the timer for the next attempt

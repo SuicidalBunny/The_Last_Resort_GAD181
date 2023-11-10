@@ -6,7 +6,7 @@ using UnityEngine;
 public class LevelMovementScript : MonoBehaviour
 {
     private float time = 0.0f;
-    private float interpolationPeriod = 0.05f;
+    private float interpolationPeriod = 0.025f;
     private float timer = 0.0f;
 
     // Update is called once per frame

@@ -7,7 +7,6 @@ public class SpawnerScript : MonoBehaviour
     private float time = 0.0f;
     private float interpolationPeriod = 1.0f;
     private int vehicleLocationSpawner = 0;
-    public Transform parent;
 
     public GameObject prefab;
 
@@ -39,7 +38,7 @@ public class SpawnerScript : MonoBehaviour
         //Resets the timer to 0
         time = 0.0f;
         //Creates the vehicle prefab using the random X axis and some other set paramaters
-        Instantiate(prefab, new Vector3(vehicleLocationSpawner, 1, -100), Quaternion.identity);
+        Instantiate(prefab, new Vector3(vehicleLocationSpawner, 1, 100), Quaternion.Euler(0, 180, 0));
         Debug.Log("Vehicle Spawned");
     }
 }

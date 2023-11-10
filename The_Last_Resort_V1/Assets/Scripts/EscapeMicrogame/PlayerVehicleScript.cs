@@ -6,7 +6,6 @@ public class PlayerVehicleScript : MonoBehaviour
 {
 
     private float speed = 10.0f;
-    public GameObject character;
 
     public GameObject policeLink;
 
@@ -24,14 +23,14 @@ public class PlayerVehicleScript : MonoBehaviour
         {
             Debug.Log("Move Left");
             //Makes the vehicle move right based off the speed float and deltaTime
-            transform.position += Vector3.right * speed * Time.deltaTime;
+            transform.position += Vector3.left * speed * Time.deltaTime;
         }
         //Checks if the "D" key is being held down
         else if (Input.GetKey(KeyCode.D))
         {
             Debug.Log("Move Right");
             //Makes the object move left based off the speed variable and deltaTime
-            transform.position += Vector3.left * speed * Time.deltaTime;
+            transform.position += Vector3.right * speed * Time.deltaTime;
         }
     }
     //Checks for any collisions that the player vehicle enters with a trigger

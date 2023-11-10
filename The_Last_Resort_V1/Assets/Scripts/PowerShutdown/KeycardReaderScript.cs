@@ -15,7 +15,8 @@ public class KeycardReaderScript : MonoBehaviour
 
     //This will link up the LED controller with the keycard reading script, to all control of LED variables
     public GameObject LEDLink;
-
+    
+    //Is called when the script first starts up
     private void Start()
     {
         //calls to generate a new min and max interpolation timer for the swipe time

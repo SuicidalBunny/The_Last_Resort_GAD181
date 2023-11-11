@@ -27,6 +27,8 @@ public class NFT_MiniGame : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
         rockPet.SetActive(false);
         error1.SetActive(false);
         error2.SetActive(false);
@@ -60,7 +62,7 @@ public class NFT_MiniGame : MonoBehaviour
             }
         }
 
-        if (error6 == true && timeLeft < 7)
+        if (error6 == true && timeLeft < 5)
         {
             error6help.SetActive(true);
         }
@@ -84,15 +86,10 @@ public class NFT_MiniGame : MonoBehaviour
         {
             error1.SetActive(true);
         }
-        if (download == 10)
+        if (download == 20)
         {
             error2.SetActive(true);
             rockPet.SetActive(true);
-        }
-        if (download == 20)
-        {
-            error3.SetActive(true);
-            
         }
         if (download == 30)
         {

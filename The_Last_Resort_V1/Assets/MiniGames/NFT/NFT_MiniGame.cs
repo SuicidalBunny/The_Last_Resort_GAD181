@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class NFT_MiniGame : MonoBehaviour
 {
 
-    public Slider sliderDownload;
+    public Slider sliderDownload; // All the UI game objects that link to the script
     public GameObject buttonDownload;
     public GameObject error1;
     public GameObject error2;
@@ -22,12 +22,12 @@ public class NFT_MiniGame : MonoBehaviour
     int download = 0;
 
     public float timeLeft;
-    public bool Timeron = false;
+    public bool Timeron = false; 
     public TextMeshProUGUI TimerTxt;
     // Start is called before the first frame update
     void Start()
     {
-        Cursor.visible = true;
+        Cursor.visible = true;                       // Sets all popups errors to off so they dont active at the start of the game
             Cursor.lockState = CursorLockMode.None;
         rockPet.SetActive(false);
         error1.SetActive(false);
@@ -39,15 +39,15 @@ public class NFT_MiniGame : MonoBehaviour
         error6help.SetActive(false);
 
         Timeron = true;
-        timeLeft = 30;
+        timeLeft = 30; // Amount of time that is left (Used to change or set the timer)
     }
 
     // Update is called once per frame
     void Update()
     {
-         sliderDownload.value = download;
+         sliderDownload.value = download; //Keeps the Download slider updated to the currect value
 
-        if (Timeron)
+        if (Timeron) // If the time runs out or is on then the following happends
         {
             if (timeLeft > 0)
             {
@@ -62,14 +62,14 @@ public class NFT_MiniGame : MonoBehaviour
             }
         }
 
-        if (error6 == true && timeLeft < 5)
+        if (error6 == true && timeLeft < 5) // if error6 is active and 5 seconds is left on the timer. Active the help 
         {
             error6help.SetActive(true);
         }
         
     }
 
-    void updateTimer(float currentTime)
+    void updateTimer(float currentTime) //Updates the timer by seconds 
     {
         currentTime += 1;
 
@@ -81,7 +81,7 @@ public class NFT_MiniGame : MonoBehaviour
 
     public void ButtonPress()
     {
-        download++;
+        download++;                         // Determinds when popups appear(Need to randomize for values)
         if (download == 5)
         {
             error1.SetActive(true);
@@ -103,7 +103,7 @@ public class NFT_MiniGame : MonoBehaviour
         }
     }
 
-    public void ButtonClose()
+    public void ButtonClose() //Close buttons for all the popups (Need to redo for less code)
     {
         error1.SetActive(false);
     }

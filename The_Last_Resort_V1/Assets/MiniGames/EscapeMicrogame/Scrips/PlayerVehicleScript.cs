@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerVehicleScript : MonoBehaviour
 {
 
-    private float speed = 20.0f;
+    private float speed = 10.0f;
 
     public GameObject policeLink;
 

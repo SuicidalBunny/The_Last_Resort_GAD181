@@ -36,7 +36,7 @@ public class NPCVehicleScript : MonoBehaviour
                 //Resets the timer to 0
                 time = 0.0f;
                 //Moves the object that the script is attatched to by 1 unit on the Z axis
-                transform.position += new Vector3(0, 0, -0.75f);
+                transform.position += new Vector3(0, 0, -0.5f);
             }
         }
     }

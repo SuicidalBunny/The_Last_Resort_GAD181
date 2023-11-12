@@ -5,10 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class UserInterface_Menu : MonoBehaviour
 {
+
+    public GameObject credits;    
+    public GameObject menu;
     // Start is called before the first frame update
     void Start()
     {
-        
+        credits.SetActive(false);
+        menu.SetActive(true);
     }
 
 
@@ -26,7 +30,14 @@ public class UserInterface_Menu : MonoBehaviour
 
     public void Credits() // Method to start the Credits
     {
-        
+        credits.SetActive(true);
+        menu.SetActive(false);
+    }
+
+     public void Creditsback() // Method to start the Credits
+    {
+        credits.SetActive(false);
+        menu.SetActive(true);
     }
 
     public void Options() // Method to open the Options Menu 

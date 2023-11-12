@@ -4,6 +4,7 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class NFT_MiniGame : MonoBehaviour
 {
@@ -59,10 +60,11 @@ public class NFT_MiniGame : MonoBehaviour
                 Debug.Log("Time Over");
                 timeLeft = 0;
                 Timeron = false;
+                SceneManager.LoadScene(1);
             }
         }
 
-        if (error6 == true && timeLeft < 5) // if error6 is active and 5 seconds is left on the timer. Active the help 
+        if (error6 == true && timeLeft < 7) // if error6 is active and 5 seconds is left on the timer. Active the help 
         {
             error6help.SetActive(true);
         }
@@ -100,6 +102,9 @@ public class NFT_MiniGame : MonoBehaviour
         {
             error6.SetActive(true);
             
+        }
+        if (download == 50){
+            SceneManager.LoadScene(3);
         }
     }
 

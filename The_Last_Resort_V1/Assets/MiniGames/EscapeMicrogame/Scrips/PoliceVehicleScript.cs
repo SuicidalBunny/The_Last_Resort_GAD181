@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PoliceVehicleScript : MonoBehaviour
 {
@@ -81,6 +82,7 @@ public class PoliceVehicleScript : MonoBehaviour
             //Creates a debug log saying that the game is over
             //Will implement means of disabling controls when new movement system is implemented
             Debug.Log("Game Over");
+            SceneManager.LoadScene(1);
         }
     }
 }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-
+using UnityEngine.SceneManagement;
 
 public class TimeScript : MonoBehaviour
 {
@@ -32,6 +32,7 @@ public class TimeScript : MonoBehaviour
                 Debug.Log("Time Over");
                 timeLeft = 0;
                 Timeron = false;
+                SceneManager.LoadScene(0);
             }
         }
     }   

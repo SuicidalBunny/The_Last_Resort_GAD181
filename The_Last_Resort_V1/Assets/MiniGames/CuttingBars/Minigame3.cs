@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 public class Minigame3 : MonoBehaviour
 {
     public GameObject cutButton;
@@ -98,6 +100,7 @@ public class Minigame3 : MonoBehaviour
         {
             miniGame3.SetActive(false);
             Door9.SetActive(false);
+             SceneManager.LoadScene(7);
         }
     }
     // Update is called once per frame

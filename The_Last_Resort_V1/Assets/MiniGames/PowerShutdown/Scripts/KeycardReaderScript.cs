@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class KeycardReaderScript : MonoBehaviour
 {
@@ -35,6 +36,7 @@ public class KeycardReaderScript : MonoBehaviour
         {
             //Tells the console that the game is over
             Debug.Log("Game Over");
+             SceneManager.LoadScene(1);
         }
     }
 
@@ -73,6 +75,8 @@ public class KeycardReaderScript : MonoBehaviour
             Debug.Log("Pass");
             //This will tell the LED Controller to set the LED type to bring up the green light
             LEDLink.GetComponent<LEDControls>().LEDType = 1;
+
+             SceneManager.LoadScene(4);
         }
         else
         {

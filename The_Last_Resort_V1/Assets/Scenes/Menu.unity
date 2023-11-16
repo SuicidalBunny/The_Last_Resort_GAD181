@@ -3689,8 +3689,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 346.8, y: -181}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -425, y: 202.22}
+  m_SizeDelta: {x: 199.3375, y: 45.8673}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &114504095
 MonoBehaviour:
@@ -3716,10 +3716,10 @@ MonoBehaviour:
 
     - [Scott (The one we fear)]
 
-    
 
-    - [Barnzy
-    (The all-knowing)]'
+
+    - [Barnzy (The
+    all-knowing)]'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3752,9 +3752,9 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 32
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_fontStyle: 33
+  m_HorizontalAlignment: 32
+  m_VerticalAlignment: 4096
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -4227,7 +4227,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 17ccf119835d54f41b8593a38f491692, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d0340a5dce288b04185d518de3e95c2f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -23401,8 +23401,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -470, y: 5}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -466.94934, y: -12.440102}
+  m_SizeDelta: {x: 199.3375, y: 45.8673}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &695009518
 MonoBehaviour:
@@ -23426,10 +23426,10 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Thank you for playing [The Last Resort]!
 
-    
 
-    Version 1 [2023]
-    [GAD_181_The_Last_Resort]. All rights reserved.
+
+    Version 1 [2023] [GAD_181_The_Last_Resort].
+    All rights reserved.
 
 
 
@@ -23468,9 +23468,9 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 32
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_fontStyle: 33
+  m_HorizontalAlignment: 32
+  m_VerticalAlignment: 4096
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -33559,8 +33559,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6, y: 260}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 7.474, y: 221.483}
+  m_SizeDelta: {x: 199.3375, y: 45.8673}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1022888593
 MonoBehaviour:
@@ -35864,7 +35864,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1111254921
 RectTransform:
   m_ObjectHideFlags: 0
@@ -38315,7 +38315,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1183898294
 RectTransform:
   m_ObjectHideFlags: 0
@@ -41616,8 +41616,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 351, y: 66.59999}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 351.33124, y: 44.068367}
+  m_SizeDelta: {x: 199.3375, y: 45.8673}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1291781882
 MonoBehaviour:
@@ -41643,24 +41643,24 @@ MonoBehaviour:
 
     [Unity]
 
-    
+
 
     [Synty- Polygon Heist Pack]
 
-    
+
 
     [Synty-
     Polygon City Pack]
 
-    
+
 
     [Photoshop]
 
-    
+
 
     [Microsoft Windows]
 
-    
+
 
     [pixelied]'
   m_isRightToLeft: 0
@@ -41695,9 +41695,9 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 32
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_fontStyle: 33
+  m_HorizontalAlignment: 32
+  m_VerticalAlignment: 4096
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -66946,8 +66946,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -191, y: 189}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -188.87346, y: 156.35147}
+  m_SizeDelta: {x: 199.3375, y: 45.8673}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2102599595
 MonoBehaviour:
@@ -66969,50 +66969,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Game Development Team
-
-    Lead Programmer: [Arda]
-
-    
-
-    Programming
-    Team
-
-    - [Lachlan]
-
-    
-
-    - [James]
-
-    
-
-    Design Team
-
-    -
-    [Arda]
-
-    
-
-    - [Lachlan]
-
-    
-
-    - [James]
-
-    
-
-    Art Team
-
-    -
-    [Arda]
-
-    
-
-    - [Lachlan]
-
-    
-
-    - [James]'
+  m_text: "Game Development Team\nLead Programmer: [Arda]\n\nProgramming Team\n-
+    [Lachlan]\n- [James]\nDesign Team\n- [Arda]\n- [Lachlan]\n- [James]\nArt Team\n-
+    [Arda]\n- [Lachlan]\t\n- [James]"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -67045,9 +67004,9 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 32
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_fontStyle: 33
+  m_HorizontalAlignment: 32
+  m_VerticalAlignment: 4096
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0

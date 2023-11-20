@@ -7,9 +7,6 @@ public class PlayerVehicleScript : MonoBehaviour
 {
     private CharacterController controller;
     private float speed = 20.0f;
-    private Vector3 playerVelocity;
-    private float groundedTimer;
-    private float verticalVelocity;
 
     public GameObject policeLink;
 

@@ -319,6 +319,32 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 767921521422600230, guid: 051bc0ed12f263042bed5607357fedb4, type: 3}
   m_PrefabInstance: {fileID: 6595258250235967750}
   m_PrefabAsset: {fileID: 0}
+--- !u!143 &448118699
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 448118693}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Height: 1
+  m_Radius: 1
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 1.1, z: 0}
 --- !u!1 &556920081
 GameObject:
   m_ObjectHideFlags: 0
@@ -1345,6 +1371,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerVehicle
       objectReference: {fileID: 0}
+    - target: {fileID: 8607121569483304276, guid: 9c21958aabe82fa4c959093ec9d1593d, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8543787617327220454, guid: 9c21958aabe82fa4c959093ec9d1593d, type: 3}
     - {fileID: 8544012338318562156, guid: 9c21958aabe82fa4c959093ec9d1593d, type: 3}
@@ -1519,7 +1549,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 767921521422600230, guid: 051bc0ed12f263042bed5607357fedb4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 448118699}
   m_SourcePrefab: {fileID: 100100000, guid: 051bc0ed12f263042bed5607357fedb4, type: 3}
 --- !u!1001 &6867164726317693875
 PrefabInstance:

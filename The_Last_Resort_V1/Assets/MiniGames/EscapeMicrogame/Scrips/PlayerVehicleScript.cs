@@ -8,8 +8,6 @@ public class PlayerVehicleScript : MonoBehaviour
     private CharacterController controller;
     private float speed = 20.0f;
 
-    public GameObject policeLink;
-
     private void Start()
     {
         //Obtains the character controller used for the players vehicle to allow movement
@@ -29,17 +27,5 @@ public class PlayerVehicleScript : MonoBehaviour
         Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0);
         //Moves the vehicle based off of the 'X' axis obtained from before, along with the speed
         controller.Move(move * Time.deltaTime * speed);
-    }
-    //Checks for any collisions that the player vehicle enters with a trigger
-    private void OnTriggerEnter(Collider other)
-    {
-        //Checks to see if the player has collided with an NPC Vehicle
-        if(other.gameObject.tag == "NPCVehicle")
-        {
-            //Runs the check to see if the player is to be arrested
-            policeLink.GetComponent<PoliceVehicleScript>().PoliceArrestCheck();
-            //Tells the game to trigger the police sequence
-            policeLink.GetComponent<PoliceVehicleScript>().policeTriggered = true;
-        }
     }
 }

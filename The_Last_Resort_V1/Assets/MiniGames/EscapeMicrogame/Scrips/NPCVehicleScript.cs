@@ -9,11 +9,11 @@ public class NPCVehicleScript : MonoBehaviour
     private float time = 0.0f;
     private float interpolationPeriod = 0.01f;
 
+    public GameObject policeLink;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        
+        policeLink = GameObject.Find("LawEnforcement");
     }
 
     // Update is called once per frame
@@ -51,6 +51,11 @@ public class NPCVehicleScript : MonoBehaviour
         {
             //Tells the console the NPC vehicle is destroyed
             Debug.Log("NPC destroyed");
+
+            //Runs the check to see if the player is to be arrested
+            policeLink.GetComponent<PoliceVehicleScript>().PoliceArrestCheck();
+            //Tells the game to trigger the police sequence
+            policeLink.GetComponent<PoliceVehicleScript>().policeTriggered = true;
 
             //Destroys the NPC that was collided with
             DestroyObject();

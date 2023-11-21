@@ -13,6 +13,8 @@ public class PoliceVehicleScript : MonoBehaviour
 
     public GameObject playerLink;
 
+    private CharacterController controller;
+
     // Start is called before the first frame update
     void Start()
     {

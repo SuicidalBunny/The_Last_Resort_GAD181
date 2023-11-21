@@ -61,7 +61,7 @@ public class NPCVehicleScript : MonoBehaviour
             DestroyObject();
         }
         //Checking if the trigger is the kill barrier
-        else if (other.gameObject.tag == "KillBarrier")
+        else if (other.gameObject.tag == "KillBarrier" || other.gameObject.tag == "LawEnforcement")
         {
             //Tells the console the kill barrier has been triggered
             Debug.Log("Kill Barrier Triggered");

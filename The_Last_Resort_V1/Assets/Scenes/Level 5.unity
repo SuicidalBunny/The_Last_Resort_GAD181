@@ -319,8 +319,8 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 767921521422600230, guid: 051bc0ed12f263042bed5607357fedb4, type: 3}
   m_PrefabInstance: {fileID: 6595258250235967750}
   m_PrefabAsset: {fileID: 0}
---- !u!143 &448118699
-CharacterController:
+--- !u!65 &448118699
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -338,13 +338,8 @@ CharacterController:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Height: 1
-  m_Radius: 1
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 1.1, z: 0}
+  m_Size: {x: 2.187236, y: 2.0098457, z: 5.313204}
+  m_Center: {x: 0, y: 1.2110262, z: 0.09058523}
 --- !u!1 &556920081
 GameObject:
   m_ObjectHideFlags: 0
@@ -1546,7 +1541,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: LawEnforcement
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 767921521422600230, guid: 051bc0ed12f263042bed5607357fedb4, type: 3}
+      propertyPath: m_TagString
+      value: LawEnforcement
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 3638596219359406043, guid: 051bc0ed12f263042bed5607357fedb4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:

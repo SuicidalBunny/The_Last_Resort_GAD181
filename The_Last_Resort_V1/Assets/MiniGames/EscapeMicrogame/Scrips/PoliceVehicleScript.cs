@@ -11,15 +11,7 @@ public class PoliceVehicleScript : MonoBehaviour
 
     public bool policeTriggered = false;
 
-    public GameObject playerLink;
-
     private CharacterController controller;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -40,7 +32,7 @@ public class PoliceVehicleScript : MonoBehaviour
         //Checks to see if the police are not on screen and if the police have been triggered
         if (policeOnScreen == false && policeTriggered == true)
         {
-            //Changes the previous saved coordinated Z axis (Places it right behind the player vehicle)
+            //Moves the police forward
             newPosition.z = -20;
             transform.position = newPosition;
             //Tells the game that the police are on screen

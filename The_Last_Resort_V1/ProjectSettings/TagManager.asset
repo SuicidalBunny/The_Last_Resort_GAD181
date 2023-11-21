@@ -6,6 +6,7 @@ TagManager:
   tags:
   - KillBarrier
   - NPCVehicle
+  - LawEnforcement
   layers:
   - Default
   - TransparentFX

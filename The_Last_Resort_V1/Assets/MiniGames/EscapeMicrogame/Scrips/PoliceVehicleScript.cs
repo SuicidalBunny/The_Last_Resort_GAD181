@@ -60,7 +60,7 @@ public class PoliceVehicleScript : MonoBehaviour
         if (policeTriggered == true)
         {
             //Changes the speed value so the police can slowly creep up
-            speed = 2 * Time.deltaTime;
+            speed = 5 * Time.deltaTime;
             //Tells the police car to move towards the player's vehicle
             transform.position = Vector3.MoveTowards(transform.position, playerLink.transform.position, speed);
         }

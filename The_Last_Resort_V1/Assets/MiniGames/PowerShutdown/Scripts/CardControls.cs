@@ -6,10 +6,25 @@ using UnityEngine.EventSystems;
 
 public class CardControls : MonoBehaviour, IDragHandler
 {
-    //Checks to see if the player has clicked and is dragging an item
+
+    private RectTransform rectTransform;
+
     public void OnDrag(PointerEventData eventData)
     {
-        //Tells the program to move the object wherever the mouse is dragging it
-        transform.position = eventData.position;
+        rectTransform.anchoredPosition += eventData.delta;
+    }
+
+    private void Start()
+    {
+        rectTransform = GetComponent<RectTransform>();
+    }
+
+    void Update()
+    {
+        if(Input.GetMouseButtonUp(0))
+        {
+            GetComponent<RectTransform>().anchoredPosition = new Vector2(-400, 0);
+        }
+
     }
 }

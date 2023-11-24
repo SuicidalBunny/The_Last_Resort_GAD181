@@ -269,8 +269,8 @@ GameObject:
   - component: {fileID: 141219623}
   - component: {fileID: 141219622}
   - component: {fileID: 141219624}
-  - component: {fileID: 141219625}
   - component: {fileID: 141219626}
+  - component: {fileID: 141219627}
   m_Layer: 5
   m_Name: Keycard
   m_TagString: Untagged
@@ -377,18 +377,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 100, y: 100}
   m_EdgeRadius: 0
---- !u!114 &141219625
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 141219620}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1ca63c16732b8b4f82a36c0b4af605c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &141219626
 Rigidbody2D:
   serializedVersion: 4
@@ -416,6 +404,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &141219627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141219620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1ca63c16732b8b4f82a36c0b4af605c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &162771096
 GameObject:
   m_ObjectHideFlags: 0

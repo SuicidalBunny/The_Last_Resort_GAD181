@@ -7,11 +7,12 @@ public class PoliceVehicleScript : MonoBehaviour
 {
     private float policeTimer = 0.0f;
     private float policeInterpolation = 5.0f;
-    private bool policeOnScreen = false;
 
     public bool policeTriggered = false;
 
-    private CharacterController controller;
+    public GameObject homePosition;
+    public GameObject playerLink;
+    private float speed;
 
     // Update is called once per frame
     void Update()
@@ -21,35 +22,29 @@ public class PoliceVehicleScript : MonoBehaviour
         if (policeTriggered == true)
         {
             PoliceTimer();
-            PoliceMover();
         }
+
+        PoliceMover();
     }
 
+    //When called will get the police to move towards the player, effectively making them "chase" the player when hit
     private void PoliceMover()
     {
-        //Creates a new vector 3 at the current location to be used later
-        Vector3 newPosition = transform.position;
-        //Checks to see if the police are not on screen and if the police have been triggered
-        if (policeOnScreen == false && policeTriggered == true)
+        //Checks to see if the police have been triggered
+        if (policeTriggered == true)
         {
-            //Moves the police forward
-            newPosition.z = -20;
-            transform.position = newPosition;
-            //Tells the game that the police are on screen
-            policeOnScreen = true;
-            //Makes a log showing that the police are on screen
-            Debug.Log($"police on screen {policeOnScreen}");
+            //Changes the speed value so the police can slowly creep up
+            speed = 2 * Time.deltaTime;
+            //Tells the police car to move towards the player's vehicle
+            transform.position = Vector3.MoveTowards(transform.position, playerLink.transform.position, speed);
         }
-        //Checks to see if the police are on screen but they are not triggered
-        else if(policeOnScreen == true && policeTriggered == false)
+        //Checks to see if the police are not triggered at the moment
+        else if (policeTriggered == false)
         {
-            //Places the law enforcement out of the cameras way
-            newPosition.z = -40;
-            transform.position = newPosition;
-            //Tells the game that the police are not on the screen anymore
-            policeOnScreen = false;
-            //Tells the console the on screen status of the police
-            Debug.Log($"Police on screen {policeOnScreen}");
+            //Increases the movespeed of the police vehicle
+            speed = 7.5f * Time.deltaTime;
+            //Tells the police vehicle to move back to its home position
+            transform.position = Vector3.MoveTowards(transform.position, homePosition.transform.position, speed);
         }
     }
 

@@ -809,6 +809,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1287730345}
   m_CullTransparentMesh: 1
+--- !u!1 &1461414094
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1461414095}
+  m_Layer: 0
+  m_Name: PlayerPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1461414095
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1461414094}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3250102330294084369}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1481794308
 GameObject:
   m_ObjectHideFlags: 0
@@ -1354,12 +1385,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 8607121569482882904, guid: d7e0a487823c391438e53cc34a337179, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1461414095}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7e0a487823c391438e53cc34a337179, type: 3}
---- !u!1 &3250102330294084368 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8607121569483304276, guid: d7e0a487823c391438e53cc34a337179, type: 3}
+--- !u!4 &3250102330294084369 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8607121569482882904, guid: d7e0a487823c391438e53cc34a337179, type: 3}
   m_PrefabInstance: {fileID: 3250102330294084367}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3949338267389377216
@@ -1501,7 +1535,7 @@ PrefabInstance:
     - target: {fileID: 3966047794601432438, guid: 662393fce44172f49b7618698dbbb4cc, type: 3}
       propertyPath: playerLink
       value: 
-      objectReference: {fileID: 3250102330294084368}
+      objectReference: {fileID: 1461414094}
     - target: {fileID: 3966047794601432438, guid: 662393fce44172f49b7618698dbbb4cc, type: 3}
       propertyPath: homePosition
       value: 

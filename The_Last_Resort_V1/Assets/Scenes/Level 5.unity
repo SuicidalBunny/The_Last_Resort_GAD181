@@ -675,11 +675,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!4 &1021875182 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6799362057861058933, guid: 117ff2548181c434b96cf6a3309f009d, type: 3}
-  m_PrefabInstance: {fileID: 3949338267389377216}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1287730345
 GameObject:
   m_ObjectHideFlags: 0
@@ -933,59 +928,6 @@ MonoBehaviour:
   timeLeft: 0
   Timeron: 0
   TimerTxt: {fileID: 556920083}
---- !u!1 &1569169371
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1569169372}
-  - component: {fileID: 1569169373}
-  m_Layer: 0
-  m_Name: PoliceBarrier
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1569169372
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1569169371}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -18}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1021875182}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1569169373
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1569169371}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 39.119705, y: 4.084169, z: 1}
-  m_Center: {x: -2.4154282, y: 1.5420842, z: 0}
 --- !u!1 &1670562842
 GameObject:
   m_ObjectHideFlags: 0
@@ -1486,10 +1428,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 6799362057861058933, guid: 117ff2548181c434b96cf6a3309f009d, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1569169372}
+    m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8664505607856000292, guid: 117ff2548181c434b96cf6a3309f009d, type: 3}
       insertIndex: -1

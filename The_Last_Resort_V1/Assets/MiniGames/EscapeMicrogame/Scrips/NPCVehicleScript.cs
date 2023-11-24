@@ -13,6 +13,7 @@ public class NPCVehicleScript : MonoBehaviour
 
     private void Start()
     {
+        //Links the NPCs with the law enforcement for when the player collides with the NPC
         policeLink = GameObject.Find("LawEnforcement");
     }
 
@@ -28,6 +29,7 @@ public class NPCVehicleScript : MonoBehaviour
     {
         //Ties the time float to deltaTime
         time += Time.deltaTime;
+        //Checks to see if the vehicle is meant to be slow
         if(gameObject.tag == "SlowCar")
         {
             //Checks to see if the timer has hit the interpolationPeriod
@@ -39,6 +41,7 @@ public class NPCVehicleScript : MonoBehaviour
                 transform.position += new Vector3(0, 0, -0.3f);
             }
         }
+        //Checks to see if the vehicle is meant to be normal speed
         else if (gameObject.tag == "NormalCar")
         {
             //Checks to see if the timer has hit the interpolationPeriod
@@ -50,6 +53,7 @@ public class NPCVehicleScript : MonoBehaviour
                 transform.position += new Vector3(0, 0, -0.5f);
             }
         }
+        //Checks to see if the vehicle is meant to be fast
         else if (gameObject.tag == "FastCar")
         {
             //Checks to see if the timer has hit the interpolationPeriod

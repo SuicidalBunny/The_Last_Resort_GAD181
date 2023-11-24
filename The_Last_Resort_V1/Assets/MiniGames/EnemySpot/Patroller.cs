@@ -9,7 +9,7 @@ public class Patroller : MonoBehaviour
     public GameObject deathCanvas;
     public GameObject player;
     public Transform[] waypoints;
-    public int speed;
+    public float speed;
 
     private int waypointIndex;
     private float dist;

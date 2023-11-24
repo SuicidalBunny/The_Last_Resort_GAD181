@@ -8,6 +8,7 @@ public class NPCVehicleScript : MonoBehaviour
 
     private float time = 0.0f;
     private float interpolationPeriod = 0.01f;
+    private float multiplier;
 
     public GameObject policeLink;
 
@@ -22,6 +23,16 @@ public class NPCVehicleScript : MonoBehaviour
     {
         //Calls for the vehicles to be moved constantly
         VehicleMovement();
+
+        MultiplierSet();
+    }
+
+    //When called sets the multiplier for the NPC vehicles
+    private void MultiplierSet()
+    {
+        //Grabs the multiplier generated from the police vehicle script
+        multiplier = policeLink.GetComponent<PoliceVehicleScript>().movementMultiplier;
+        Debug.Log($"Multiplier {multiplier}");
     }
 
     //Allows the vehicle to move with the terrain
@@ -38,7 +49,7 @@ public class NPCVehicleScript : MonoBehaviour
                 //Resets the timer to 0
                 time = 0.0f;
                 //Moves the object that the script is attatched to by 1 unit on the Z axis
-                transform.position += new Vector3(0, 0, -0.3f);
+                transform.position += new Vector3(0, 0, -0.3f * multiplier);
             }
         }
         //Checks to see if the vehicle is meant to be normal speed
@@ -50,7 +61,7 @@ public class NPCVehicleScript : MonoBehaviour
                 //Resets the timer to 0
                 time = 0.0f;
                 //Moves the object that the script is attatched to by 1 unit on the Z axis
-                transform.position += new Vector3(0, 0, -0.5f);
+                transform.position += new Vector3(0, 0, -0.5f * multiplier);
             }
         }
         //Checks to see if the vehicle is meant to be fast
@@ -62,7 +73,7 @@ public class NPCVehicleScript : MonoBehaviour
                 //Resets the timer to 0
                 time = 0.0f;
                 //Moves the object that the script is attatched to by 1 unit on the Z axis
-                transform.position += new Vector3(0, 0, -0.7f);
+                transform.position += new Vector3(0, 0, -0.7f * multiplier);
             }
         }
     }

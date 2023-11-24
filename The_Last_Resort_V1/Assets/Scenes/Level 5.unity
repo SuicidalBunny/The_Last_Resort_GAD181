@@ -1300,6 +1300,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6765824326299597713, guid: d7e0a487823c391438e53cc34a337179, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8607121569482882904, guid: d7e0a487823c391438e53cc34a337179, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1343,6 +1347,10 @@ PrefabInstance:
     - target: {fileID: 8607121569483304276, guid: d7e0a487823c391438e53cc34a337179, type: 3}
       propertyPath: m_Name
       value: PlayerVehicle
+      objectReference: {fileID: 0}
+    - target: {fileID: 8607121569483304276, guid: d7e0a487823c391438e53cc34a337179, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

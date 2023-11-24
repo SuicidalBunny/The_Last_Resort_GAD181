@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,10 @@ public class PoliceVehicleScript : MonoBehaviour
 {
     private float policeTimer = 0.0f;
     private float policeInterpolation = 5.0f;
+
+    private float untouchedTime;
+    private float untouchedInterpolation = 5.0f;
+    public float movementMultiplier;
 
     public bool policeTriggered = false;
 
@@ -23,8 +28,29 @@ public class PoliceVehicleScript : MonoBehaviour
         {
             PoliceTimer();
         }
-
+        //Moves the law enforcement appropriately
         PoliceMover();
+        //Calls to run the vehicle multipliers
+        UntouchedMultiplier();
+    }
+
+    private void UntouchedMultiplier()
+    {
+        //Ties the time that the player has not been hit by deltatime
+        untouchedTime += Time.deltaTime;
+        //Checks to see if it has been 10 seconds since the player has been hit by
+        if (untouchedTime >= 10)
+        {
+            movementMultiplier = 1.5f;
+        }
+        else if (untouchedTime >= untouchedInterpolation)
+        {
+            movementMultiplier = 1.25f;
+        }
+        else if (untouchedTime <= untouchedInterpolation)
+        {
+            movementMultiplier = 1.0f;
+        }
     }
 
     //When called will get the police to move towards the player, effectively making them "chase" the player when hit
@@ -57,6 +83,7 @@ public class PoliceVehicleScript : MonoBehaviour
         if (policeTimer >= policeInterpolation)
         {
             policeTimer = 0.0f;
+            untouchedTime = 0.0f;
             //Sets the police trigger to false, thus disabling the police
             policeTriggered = false;
             PoliceMover();

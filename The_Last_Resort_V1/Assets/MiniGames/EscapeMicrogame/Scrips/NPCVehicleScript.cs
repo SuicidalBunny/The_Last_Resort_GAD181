@@ -28,7 +28,18 @@ public class NPCVehicleScript : MonoBehaviour
     {
         //Ties the time float to deltaTime
         time += Time.deltaTime;
-        if(gameObject.tag == "NPCVehicle")
+        if(gameObject.tag == "SlowCar")
+        {
+            //Checks to see if the timer has hit the interpolationPeriod
+            if (time >= interpolationPeriod)
+            {
+                //Resets the timer to 0
+                time = 0.0f;
+                //Moves the object that the script is attatched to by 1 unit on the Z axis
+                transform.position += new Vector3(0, 0, -0.3f);
+            }
+        }
+        else if (gameObject.tag == "NormalCar")
         {
             //Checks to see if the timer has hit the interpolationPeriod
             if (time >= interpolationPeriod)
@@ -37,6 +48,17 @@ public class NPCVehicleScript : MonoBehaviour
                 time = 0.0f;
                 //Moves the object that the script is attatched to by 1 unit on the Z axis
                 transform.position += new Vector3(0, 0, -0.5f);
+            }
+        }
+        else if (gameObject.tag == "FastCar")
+        {
+            //Checks to see if the timer has hit the interpolationPeriod
+            if (time >= interpolationPeriod)
+            {
+                //Resets the timer to 0
+                time = 0.0f;
+                //Moves the object that the script is attatched to by 1 unit on the Z axis
+                transform.position += new Vector3(0, 0, -0.7f);
             }
         }
     }

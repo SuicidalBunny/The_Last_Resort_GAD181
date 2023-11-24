@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerVehicleScript : MonoBehaviour
 {
     private CharacterController controller;
-    private float speed = 20.0f;
+    private float speed = 25.0f;
 
     private void Start()
     {

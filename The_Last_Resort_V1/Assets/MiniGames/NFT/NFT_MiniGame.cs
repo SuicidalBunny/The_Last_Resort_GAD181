@@ -17,6 +17,7 @@ public class NFT_MiniGame : MonoBehaviour
     public GameObject error4;
     public GameObject error5;
     public GameObject error6;
+    public GameObject error7;
     public GameObject error6help;
     public GameObject rockPet;
     public GameObject exitButton;
@@ -38,6 +39,7 @@ public class NFT_MiniGame : MonoBehaviour
         error5.SetActive(false);
         error6.SetActive(false);
         error6help.SetActive(false);
+        error7.SetActive(false);
 
         Timeron = true;
         timeLeft = 30; // Amount of time that is left (Used to change or set the timer)
@@ -83,28 +85,43 @@ public class NFT_MiniGame : MonoBehaviour
 
     public void ButtonPress()
     {
-        download++;                         // Determinds when popups appear(Need to randomize for values)
-        if (download == 5)
+        download++;     // Download Value
+        if (download == 50)
         {
-            error1.SetActive(true);
-        }
-        if (download == 20)
-        {
-            error2.SetActive(true);
-            rockPet.SetActive(true);
-        }
-        if (download == 30)
-        {
-            error4.SetActive(true);
-            
-        }
-        if (download == 45)
-        {
-            error6.SetActive(true);
-            
-        }
-        if (download == 50){
             SceneManager.LoadScene(3);
+        }
+        int popUpRan = Random.Range(1, 5); // 4 will never get picket. Only options between 1 and 4
+        Debug.Log(popUpRan);
+        if (popUpRan == 1) // if popup random = cirital 1 then do the if statement.
+        {
+            int popUpSelect = Random.Range(1, 100); // 100 will never get picket. Only options between 1 and 99
+            Debug.Log(popUpSelect);
+
+            if (popUpSelect >= 1 && popUpSelect <= 19)
+            {
+                error1.SetActive(true);
+            }
+            if (popUpSelect >= 20 && popUpSelect <= 39)
+            {
+                error2.SetActive(true);
+                rockPet.SetActive(true);
+            }
+            if (popUpSelect >= 40 && popUpSelect <= 59)
+            {
+                error4.SetActive(true);
+
+            }
+            if (popUpSelect >= 60 && popUpSelect <= 79)
+            {
+                error6.SetActive(true);
+
+            }
+            if (popUpSelect >= 80 && popUpSelect <= 99)
+            {
+               // error7.SetActive(true);
+
+            }
+          
         }
     }
 
@@ -138,5 +155,9 @@ public class NFT_MiniGame : MonoBehaviour
     public void Button6Fake()
     {
         error5.SetActive(true);
+    }
+    public void ButtonClose7()
+    {
+        error7.SetActive(false);
     }
 }

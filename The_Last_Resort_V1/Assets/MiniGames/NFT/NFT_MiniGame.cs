@@ -82,14 +82,21 @@ public class NFT_MiniGame : MonoBehaviour
 
         TimerTxt.text = string.Format("Time Left: " + "{0:00}:{1:00}", minutes, seconds);
     }
+   
+    public void SaveScore()
+    {
+        PlayerPrefs.SetInt("Score", 1000); // Creates and saves a player score for the leader board
+    }
 
     public void ButtonPress()
     {
         download++;     // Download Value
         if (download == 50)
         {
-            SceneManager.LoadScene(3);
+            SaveScore();
+           // SceneManager.LoadScene(3);
         }
+
         int popUpRan = Random.Range(1, 5); // 4 will never get picket. Only options between 1 and 4
         Debug.Log(popUpRan);
         if (popUpRan == 1) // if popup random = cirital 1 then do the if statement.

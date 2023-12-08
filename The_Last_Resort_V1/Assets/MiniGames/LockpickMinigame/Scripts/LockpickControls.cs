@@ -27,8 +27,11 @@ public class LockpickControls : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-    }
+    lock1Unlocked = false;
+    lock2Unlocked = false;
+    lock3Unlocked = false;
+    lock4Unlocked = false;
+}
 
     // Update is called once per frame
     void Update()
@@ -130,7 +133,14 @@ public class LockpickControls : MonoBehaviour
     {
         if(lock1Unlocked == true && lock2Unlocked == true && lock3Unlocked == true && lock4Unlocked == true)
         {
-            doorLink.GetComponent<LockpickEnabler>().DoorOpen();
+            if(doorLink.GetComponent<LockpickEnabler>().doorType == 1)
+            {
+                doorLink.GetComponent<LockpickEnabler>().DoorOpen();
+            }
+            else if (doorLink.GetComponent<LockpickEnabler>().doorType == 2)
+            {
+                doorLink.GetComponent<LockpickEnabler>().Door2Open();
+            }
         }
     }
 }

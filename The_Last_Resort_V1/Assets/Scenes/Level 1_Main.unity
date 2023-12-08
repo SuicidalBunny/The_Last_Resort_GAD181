@@ -1136,9 +1136,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 24185816}
+  - component: {fileID: 24185817}
+  - component: {fileID: 24185818}
   m_Layer: 0
   m_Name: DoorLockPick_Locked_2
-  m_TagString: Untagged
+  m_TagString: Door2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1160,6 +1162,42 @@ Transform:
   - {fileID: 1831207716}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &24185817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 24185815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7610f760145688f4696411d1a665650d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lockpickMinigame: {fileID: 1749108621}
+  openDoor: {fileID: 555059000}
+  doorType: 0
+--- !u!65 &24185818
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 24185815}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.3414917, y: 2.302039, z: 0.511261}
+  m_Center: {x: -6.457123, y: -0.09505069, z: 46.60614}
 --- !u!1001 &24635752
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20926,6 +20964,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lockpickMinigame: {fileID: 1749108621}
   openDoor: {fileID: 1542589156}
+  doorType: 0
 --- !u!1 &439474719
 GameObject:
   m_ObjectHideFlags: 0

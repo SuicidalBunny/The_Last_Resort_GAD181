@@ -12,6 +12,7 @@ TagManager:
   - Door
   - LockpickMinigame
   - Door2
+  - SetPin
   layers:
   - Default
   - TransparentFX

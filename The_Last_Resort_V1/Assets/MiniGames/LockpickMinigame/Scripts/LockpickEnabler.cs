@@ -9,6 +9,8 @@ public class LockpickEnabler : MonoBehaviour
 
     public GameObject openDoor;
 
+    public GameObject gameLink;
+
     public int doorType;
 
     // Start is called before the first frame update
@@ -28,12 +30,15 @@ public class LockpickEnabler : MonoBehaviour
         if(other.gameObject.tag == "Player" && this.gameObject.tag == "Door")
         {
             lockpickMinigame.SetActive(true);
+            gameLink.GetComponent<LockpickControls>().GameRestart();
             doorType = 1;
         }
-        else if (other.gameObject.tag == "Player" && this.gameObject.tag == "Door2")
+        else if (other.gameObject.tag == "Player")
         {
             lockpickMinigame.SetActive(true);
+            gameLink.GetComponent<LockpickControls>().GameRestart();
             doorType = 2;
+            
         }
     }
     private void OnTriggerExit(Collider other)
@@ -47,19 +52,6 @@ public class LockpickEnabler : MonoBehaviour
         {
             openDoor.SetActive(true);
             lockpickMinigame.SetActive(false);
-            doorType = 0;
-
-            this.gameObject.SetActive(false);
-        }
-    }
-
-    public void Door2Open()
-    {
-        if(this.gameObject.tag == "Door2")
-        {
-            openDoor.SetActive(true);
-            lockpickMinigame.SetActive(false);
-            doorType = 0;
 
             this.gameObject.SetActive(false);
         }

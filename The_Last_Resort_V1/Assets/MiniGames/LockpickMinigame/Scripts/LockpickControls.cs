@@ -11,12 +11,13 @@ public class LockpickControls : MonoBehaviour
     public GameObject pin3Link;
     public GameObject pin4Link;
 
-    private bool lock1Unlocked = false;
-    private bool lock2Unlocked = false;
-    private bool lock3Unlocked = false;
-    private bool lock4Unlocked = false;
+    public bool lock1Unlocked = false;
+    public bool lock2Unlocked = false;
+    public bool lock3Unlocked = false;
+    public bool lock4Unlocked = false;
 
     public GameObject doorLink;
+    public GameObject door2Link;
 
     public int pinStrikeStatus;
 
@@ -27,11 +28,8 @@ public class LockpickControls : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-    lock1Unlocked = false;
-    lock2Unlocked = false;
-    lock3Unlocked = false;
-    lock4Unlocked = false;
-}
+
+    }
 
     // Update is called once per frame
     void Update()
@@ -137,10 +135,29 @@ public class LockpickControls : MonoBehaviour
             {
                 doorLink.GetComponent<LockpickEnabler>().DoorOpen();
             }
-            else if (doorLink.GetComponent<LockpickEnabler>().doorType == 2)
+            else if(door2Link.GetComponent<LockpickEnabler>().doorType == 2)
             {
-                doorLink.GetComponent<LockpickEnabler>().Door2Open();
+                door2Link.GetComponent<LockpickEnabler>().DoorOpen();
             }
+        }
+    }
+
+    public void GameRestart()
+    {
+        lock1Unlocked = false;
+        lock2Unlocked = false;
+        lock3Unlocked = false;
+        lock4Unlocked = false;
+
+        pin1Link.SetActive(true);
+        pin2Link.SetActive(true);
+        pin3Link.SetActive(true);
+        pin4Link.SetActive(true);
+
+        GameObject[] gos = GameObject.FindGameObjectsWithTag("SetPin");
+        foreach (GameObject go in gos)
+        {
+            Destroy(go);
         }
     }
 }

@@ -16,17 +16,22 @@ public class LockpickControls : MonoBehaviour
     private bool lock3Unlocked = false;
     private bool lock4Unlocked = false;
 
+    public GameObject doorLink;
+
     public int pinStrikeStatus;
 
     public int pinNumber = 1;
 
-    public bool controlsActive = true;
+    public bool controlsActive = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
+    lock1Unlocked = false;
+    lock2Unlocked = false;
+    lock3Unlocked = false;
+    lock4Unlocked = false;
+}
 
     // Update is called once per frame
     void Update()
@@ -36,6 +41,7 @@ public class LockpickControls : MonoBehaviour
         PinStrike();
         PinSet();
         PinMovement();
+        PinChecker();
     }
 
     private void PickMover()
@@ -67,7 +73,7 @@ public class LockpickControls : MonoBehaviour
 
     private void PinStrike()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.Space) && controlsActive == true)
         {
             pinStrikeStatus = Random.Range(1, 5);
             Debug.Log(pinStrikeStatus);
@@ -119,6 +125,21 @@ public class LockpickControls : MonoBehaviour
             {
                 pin4Link.GetComponent<PinScript>().PinSet(200, 50);
                 lock4Unlocked = true;
+            }
+        }
+    }
+
+    private void PinChecker()
+    {
+        if(lock1Unlocked == true && lock2Unlocked == true && lock3Unlocked == true && lock4Unlocked == true)
+        {
+            if(doorLink.GetComponent<LockpickEnabler>().doorType == 1)
+            {
+                doorLink.GetComponent<LockpickEnabler>().DoorOpen();
+            }
+            else if (doorLink.GetComponent<LockpickEnabler>().doorType == 2)
+            {
+                doorLink.GetComponent<LockpickEnabler>().Door2Open();
             }
         }
     }

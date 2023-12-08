@@ -16,11 +16,13 @@ public class LockpickControls : MonoBehaviour
     private bool lock3Unlocked = false;
     private bool lock4Unlocked = false;
 
+    public GameObject doorLink;
+
     public int pinStrikeStatus;
 
     public int pinNumber = 1;
 
-    public bool controlsActive = true;
+    public bool controlsActive = false;
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +38,7 @@ public class LockpickControls : MonoBehaviour
         PinStrike();
         PinSet();
         PinMovement();
+        PinChecker();
     }
 
     private void PickMover()
@@ -120,6 +123,14 @@ public class LockpickControls : MonoBehaviour
                 pin4Link.GetComponent<PinScript>().PinSet(200, 50);
                 lock4Unlocked = true;
             }
+        }
+    }
+
+    private void PinChecker()
+    {
+        if(lock1Unlocked == true && lock2Unlocked == true && lock3Unlocked == true && lock4Unlocked == true)
+        {
+            doorLink.GetComponent<LockpickEnabler>().DoorOpen();
         }
     }
 }

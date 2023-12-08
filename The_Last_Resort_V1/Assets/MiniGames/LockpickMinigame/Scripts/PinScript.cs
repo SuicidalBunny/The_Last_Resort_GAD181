@@ -50,7 +50,7 @@ public class PinScript : MonoBehaviour
     public void PinSet(int x, int y)
     {
         GameObject pin = Instantiate(setPin, new Vector3(x, y, 0), Quaternion.Euler(0,0,0));
-        pin.transform.SetParent(GameObject.FindGameObjectWithTag("Canvas").transform, false);
+        pin.transform.SetParent(GameObject.FindGameObjectWithTag("LockpickMinigame").transform, false);
 
         pinTimer = 2;
 

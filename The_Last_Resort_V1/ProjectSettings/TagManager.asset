@@ -9,6 +9,8 @@ TagManager:
   - SlowCar
   - NormalCar
   - FastCar
+  - Door
+  - LockpickMinigame
   layers:
   - Default
   - TransparentFX

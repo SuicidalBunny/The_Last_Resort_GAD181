@@ -22,7 +22,7 @@ public class PinScript : MonoBehaviour
 
     }
 
-    public void PleaseWork()
+    public void PinRaise()
     {
         if (pinLink.GetComponent<LockpickControls>().pinStrikeStatus == 4)
         {

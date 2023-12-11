@@ -24,22 +24,6 @@ public class KeycardReaderScript : MonoBehaviour
         InterpolationGenerator();
     }
 
-    //When called it will add 1 to the fail counter and check if the player has failed too many times
-    private void SwipeFail()
-    {
-        //Adds 1 to the fail counter
-        failCount++;
-        //Tells the console how many times the player has failed
-        Debug.Log($"Fail Counter: {failCount}");
-        //Checks if the fail counter is more than or equal to 3 before making the game over screen
-        if(failCount >= 3)
-        {
-            //Tells the console that the game is over
-            Debug.Log("Game Over");
-             SceneManager.LoadScene(1);
-        }
-    }
-
     //Checks if a collider is within the trigger zone
     public void OnTriggerStay2D(Collider2D collision)
     {
@@ -84,8 +68,6 @@ public class KeycardReaderScript : MonoBehaviour
             Debug.Log("Fail");
             //This tells the LED controller to set the led as the red light
             LEDLink.GetComponent<LEDControls>().LEDType = 2;
-            //Adds 1 to the fail counter and checks to see if the player has failed the minigame
-            SwipeFail();
         }
 
         //Resets the timer for the next attempt

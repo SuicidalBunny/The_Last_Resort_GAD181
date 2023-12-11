@@ -17,7 +17,6 @@ public class LockpickControls : MonoBehaviour
     public bool lock4Unlocked = false;
 
     public GameObject doorLink;
-    public GameObject door2Link;
 
     public int pinStrikeStatus;
 
@@ -83,19 +82,19 @@ public class LockpickControls : MonoBehaviour
         switch (pinNumber)
         {
             case 1:
-                pin1Link.GetComponent<PinScript>().PleaseWork();
+                pin1Link.GetComponent<PinScript>().PinRaise();
                 break;
 
             case 2:
-                pin2Link.GetComponent<PinScript>().PleaseWork();
+                pin2Link.GetComponent<PinScript>().PinRaise();
                 break;
 
             case 3:
-                pin3Link.GetComponent<PinScript>().PleaseWork();
+                pin3Link.GetComponent<PinScript>().PinRaise();
                 break;
 
             case 4:
-                pin4Link.GetComponent<PinScript>().PleaseWork();
+                pin4Link.GetComponent<PinScript>().PinRaise();
                 break;
         }
     }
@@ -106,22 +105,22 @@ public class LockpickControls : MonoBehaviour
         {
             if (pin1Link.GetComponent<PinScript>().pinRaised == true)
             {
-                pin1Link.GetComponent<PinScript>().PinSet(-400, 50);
+                pin1Link.GetComponent<PinScript>().PinSet(-400, 100);
                 lock1Unlocked = true;
             }
             else if (pin2Link.GetComponent<PinScript>().pinRaised == true)
             {
-                pin2Link.GetComponent<PinScript>().PinSet(-200, 50);
+                pin2Link.GetComponent<PinScript>().PinSet(-200, 100);
                 lock2Unlocked = true;
             }
             else if (pin3Link.GetComponent<PinScript>().pinRaised == true)
             {
-                pin3Link.GetComponent<PinScript>().PinSet(0, 50);
+                pin3Link.GetComponent<PinScript>().PinSet(0, 100);
                 lock3Unlocked = true;
             }
             else if (pin4Link.GetComponent<PinScript>().pinRaised == true)
             {
-                pin4Link.GetComponent<PinScript>().PinSet(200, 50);
+                pin4Link.GetComponent<PinScript>().PinSet(200, 100);
                 lock4Unlocked = true;
             }
         }
@@ -134,10 +133,6 @@ public class LockpickControls : MonoBehaviour
             if(doorLink.GetComponent<LockpickEnabler>().doorType == 1)
             {
                 doorLink.GetComponent<LockpickEnabler>().DoorOpen();
-            }
-            else if(door2Link.GetComponent<LockpickEnabler>().doorType == 2)
-            {
-                door2Link.GetComponent<LockpickEnabler>().DoorOpen();
             }
         }
     }

@@ -22,6 +22,7 @@ public class PinScript : MonoBehaviour
 
     }
 
+    //Checks the pin strike status to see if it is as 4 before calling to knock it up
     public void PinRaise()
     {
         if (pinLink.GetComponent<LockpickControls>().pinStrikeStatus == 4)
@@ -33,11 +34,13 @@ public class PinScript : MonoBehaviour
             pinLink.GetComponent<LockpickControls>().pinStrikeStatus = 0;
             pinLink.GetComponent<LockpickControls>().controlsActive = false;
         }
+        //A timer starts when the pin is raised to count how long it should be up there for
         if (pinRaised == true)
         {
             pinTimer += Time.deltaTime;
             Debug.Log(pinTimer);
         }
+        //After 2 seconds the pin will drop down
         if (pinTimer >= 2)
         {
             transform.position -= new Vector3(0, 50, 0);
@@ -47,6 +50,7 @@ public class PinScript : MonoBehaviour
         }
     }
 
+    //Creates the new set pin whilst disabling the interactible pin
     public void PinSet(int x, int y)
     {
         GameObject pin = Instantiate(setPin, new Vector3(x, y, 0), Quaternion.Euler(0,0,0));

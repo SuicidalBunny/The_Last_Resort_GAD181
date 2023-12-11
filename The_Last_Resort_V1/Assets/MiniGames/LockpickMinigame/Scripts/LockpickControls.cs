@@ -68,6 +68,7 @@ public class LockpickControls : MonoBehaviour
         }
     }
 
+    //When called will create a random range between 1 and 4.
     private void PinStrike()
     {
         if(Input.GetKeyDown(KeyCode.Space) && controlsActive == true)
@@ -77,6 +78,7 @@ public class LockpickControls : MonoBehaviour
         }
     }
 
+    //When called, will grab the pin number that is being hovered over and call for the pin to be raised
     private void PinMovement()
     {
         switch (pinNumber)
@@ -99,6 +101,7 @@ public class LockpickControls : MonoBehaviour
         }
     }
 
+    //When the player presses the E key, it will check to see if the pin is raised and set the pin in place, whilst telling the game the pin is unlocked
     private void PinSet()
     {
         if (Input.GetKeyDown(KeyCode.E))
@@ -126,6 +129,7 @@ public class LockpickControls : MonoBehaviour
         }
     }
 
+    //Checks to see if all four pins are unlocked before opening the door
     private void PinChecker()
     {
         if(lock1Unlocked == true && lock2Unlocked == true && lock3Unlocked == true && lock4Unlocked == true)
@@ -137,6 +141,7 @@ public class LockpickControls : MonoBehaviour
         }
     }
 
+    //Resets the minigame when called
     public void GameRestart()
     {
         lock1Unlocked = false;
